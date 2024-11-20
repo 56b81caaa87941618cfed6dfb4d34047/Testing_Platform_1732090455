@@ -79,5 +79,20 @@
         "source": "web_client",
         "content": "I want you to put it in color green",
         "metadata": {}
+    },
+    {
+        "id": "265ae0a7-373a-405b-820c-30fa4d1d8fbe",
+        "timestamp": "2024-11-20T09:10:55.105842Z",
+        "role": "tool_call",
+        "source": "base_assistant",
+        "content": null,
+        "metadata": {
+            "id": "call_yxoaGA9whoP6VdIyGVa6YrLm",
+            "function": {
+                "arguments": "{\"component_id\":\"Hero1732090458\",\"change_description\":\"Change the color of the title 'WEE' to green in the Hero component.\",\"acknowledgement_message\":\"The title color has been changed to green in the Hero component.\"}",
+                "name": "EditFrontendComponent"
+            },
+            "type": "function"
+        }
     }
 ]
