@@ -73,5 +73,15 @@
         "source": "base_assistant",
         "content": "Could you please clarify what you mean by \"WEE\"? Are you referring to a specific style or formatting for the title?",
         "metadata": {}
+    },
+    {
+        "id": "0954c569-791d-44c4-97f7-e043fa222389",
+        "timestamp": "2024-11-20T15:45:41.470670Z",
+        "role": "user",
+        "source": "web_client",
+        "content": "WEE is the copy",
+        "metadata": {
+            "component_id": "Footer1732090458"
+        }
     }
 ]
