@@ -63,5 +63,13 @@
         "metadata": {
             "tool_call_id": "call_Zr1qAzlIuRuYZ8wSbxerhnc2"
         }
+    },
+    {
+        "id": "0e8e3820-0064-44c8-a8d7-ffc0d22526ad",
+        "timestamp": "2024-11-20T09:08:48.169672Z",
+        "role": "assistant",
+        "source": "base_assistant",
+        "content": "The title 'WEE' has been successfully added to the Hero component. What would you like to do next?",
+        "metadata": {}
     }
 ]
