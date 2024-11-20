@@ -6,5 +6,13 @@
         "source": "base_assistant",
         "content": "Welcome to your new project! I can help you edit it however you want. What would you like to do?",
         "metadata": {}
+    },
+    {
+        "id": "994ddb44-8db0-42a2-b316-567788c4b7ce",
+        "timestamp": "2024-11-20T09:08:04.924282Z",
+        "role": "user",
+        "source": "web_client",
+        "content": "what are the components?",
+        "metadata": {}
     }
 ]
