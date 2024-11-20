@@ -14,5 +14,13 @@
         "source": "web_client",
         "content": "add to the title \"YEE\"",
         "metadata": {}
+    },
+    {
+        "id": "410d86f7-c7cd-4841-a182-b91e307758da",
+        "timestamp": "2024-11-20T08:34:44.930048Z",
+        "role": "assistant",
+        "source": "base_assistant",
+        "content": "Since you don't have a component selected, please go to the \"Components\" tab and select the title component, then I can help you edit it.",
+        "metadata": {}
     }
 ]
