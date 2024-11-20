@@ -1,0 +1,23 @@
+{
+    "name": "example",
+    "prefix": "%#PLACEHOLDER",
+    "placeholderMappings": {
+        "Header": [
+            "APPLICATION_NAME"
+        ],
+        "Hero": [
+            "HERO_HEADING_TEXT",
+            "HERO_SUBHEADING_TEXT"
+        ],
+        "Footer": [
+            "APPLICATION_NAME",
+            "FOOTER_TEXT"
+        ]
+    },
+    "placeholders": {
+        "APPLICATION_NAME": "TestPro",
+        "HERO_HEADING_TEXT": "Revolutionize Your Software Testing",
+        "HERO_SUBHEADING_TEXT": "Streamline your QA process with our powerful, intuitive testing platform. Catch bugs faster, release with confidence.",
+        "FOOTER_TEXT": "\u00a9 2023 TestPro. Empowering quality assurance teams worldwide."
+    }
+}
