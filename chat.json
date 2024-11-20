@@ -30,5 +30,13 @@
         "source": "web_client",
         "content": "what are the components",
         "metadata": {}
+    },
+    {
+        "id": "1da0d46f-77c7-4bbb-a74e-a4083f0f99bd",
+        "timestamp": "2024-11-20T08:34:55.960063Z",
+        "role": "assistant",
+        "source": "base_assistant",
+        "content": "The current components in your app are: `Footer1732090458`, `Hero1732090458`, and `Header1732090458`. You can select one of these components to edit it.",
+        "metadata": {}
     }
 ]
