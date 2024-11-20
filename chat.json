@@ -128,5 +128,20 @@
         "source": "web_client",
         "content": "no, put the backgroung in color pink",
         "metadata": {}
+    },
+    {
+        "id": "efca25bc-80af-4c3a-91ab-b10038754a24",
+        "timestamp": "2024-11-20T09:14:47.345513Z",
+        "role": "tool_call",
+        "source": "base_assistant",
+        "content": null,
+        "metadata": {
+            "id": "call_g8MPhuYaQoM77s4lWC4crvAg",
+            "function": {
+                "arguments": "{\"component_id\":\"Hero1732090458\",\"change_description\":\"Change the background color to pink in the Hero component.\",\"acknowledgement_message\":\"The background color has been changed to pink in the Hero component.\"}",
+                "name": "EditFrontendComponent"
+            },
+            "type": "function"
+        }
     }
 ]
