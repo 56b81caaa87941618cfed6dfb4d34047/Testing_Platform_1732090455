@@ -46,5 +46,20 @@
         "source": "web_client",
         "content": "add it to Hero1732090458",
         "metadata": {}
+    },
+    {
+        "id": "5322ea28-19e8-4f3d-98c2-b0274f2a5090",
+        "timestamp": "2024-11-20T08:35:05.154063Z",
+        "role": "tool_call",
+        "source": "base_assistant",
+        "content": null,
+        "metadata": {
+            "id": "call_uHbKMXtSgD0bTBCuVY27McDm",
+            "function": {
+                "arguments": "{\"component_id\":\"Hero1732090458\",\"change_description\":\"Add 'YEE' to the title.\",\"acknowledgement_message\":\"The title has been updated to include 'YEE'.\"}",
+                "name": "EditFrontendComponent"
+            },
+            "type": "function"
+        }
     }
 ]
