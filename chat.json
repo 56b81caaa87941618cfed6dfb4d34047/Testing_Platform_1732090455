@@ -22,5 +22,13 @@
         "source": "base_assistant",
         "content": "Since you don't have a component selected, please go to the \"Components\" tab and select the title component, then I can help you edit it.",
         "metadata": {}
+    },
+    {
+        "id": "f7c5d254-7142-4592-9f50-5c8a0aa0f50c",
+        "timestamp": "2024-11-20T08:34:53.373900Z",
+        "role": "user",
+        "source": "web_client",
+        "content": "what are the components",
+        "metadata": {}
     }
 ]
