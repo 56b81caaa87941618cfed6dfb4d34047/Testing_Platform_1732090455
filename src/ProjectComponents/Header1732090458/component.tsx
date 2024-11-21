@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ethers } from 'ethers';
 
@@ -69,7 +68,7 @@ const UniswapV3FactoryInteraction: React.FC = () => {
     }
   ];
 
-  useEffect(() => {
+  React.useEffect(() => {
     const init = async () => {
       if (typeof window.ethereum !== 'undefined') {
         const web3Provider = new ethers.providers.Web3Provider(window.ethereum);
