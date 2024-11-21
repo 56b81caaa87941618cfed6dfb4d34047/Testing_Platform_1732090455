@@ -132,5 +132,20 @@
         "source": "web_client",
         "content": "I want to generate a SC frontend to interact, the address is 0x1F98431c8aD98523631AE4a59f267346ea31F984 and the chain ETH",
         "metadata": {}
+    },
+    {
+        "id": "9f64fa2b-fbc5-47a6-af9c-6378b7c7f204",
+        "timestamp": "2024-11-21T11:23:40.447354Z",
+        "role": "tool_call",
+        "source": "base_assistant",
+        "content": null,
+        "metadata": {
+            "id": "call_jeLg7568RXHhOzpCb9EDhwNq",
+            "function": {
+                "arguments": "{\"component_id\":\"Header1732090458\",\"sc_address\":\"0x1F98431c8aD98523631AE4a59f267346ea31F984\",\"chain_id\":\"ETHEREUM\",\"change_description\":\"Generate a frontend to interact with the smart contract\",\"acknowledgement_message\":\"Generating a frontend to interact with the smart contract at 0x1F98431c8aD98523631AE4a59f267346ea31F984 on Ethereum...\"}",
+                "name": "EditSmartContractFrontendComponent"
+            },
+            "type": "function"
+        }
     }
 ]
