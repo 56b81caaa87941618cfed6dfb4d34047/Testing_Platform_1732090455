@@ -124,5 +124,13 @@
         "source": "base_assistant",
         "content": "I've changed the title in the header component to \"WEE\". Is there anything else you would like to do?",
         "metadata": {}
+    },
+    {
+        "id": "c6dbab28-15d2-44ed-bdf2-ff42efe9d956",
+        "timestamp": "2024-11-21T11:23:35.410264Z",
+        "role": "user",
+        "source": "web_client",
+        "content": "I want to generate a SC frontend to interact, the address is 0x1F98431c8aD98523631AE4a59f267346ea31F984 and the chain ETH",
+        "metadata": {}
     }
 ]
