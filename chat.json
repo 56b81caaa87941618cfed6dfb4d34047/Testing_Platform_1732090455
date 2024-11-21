@@ -173,5 +173,13 @@
         "source": "base_assistant",
         "content": "I have successfully generated a frontend component to interact with the smart contract at the address provided on Ethereum. This component includes functionality for all the non-admin functions specified in the ABI. Is there anything else you would like to do?",
         "metadata": {}
+    },
+    {
+        "id": "18fc32f4-2a0f-4389-9165-32a2c237c087",
+        "timestamp": "2024-11-21T14:40:12.223267Z",
+        "role": "user",
+        "source": "web_client",
+        "content": "- Avoid importing React hooks and other named exports directly in the import statement. Instead, access them through the React namespace to minimize imports. Example: Replace import React, { useState } from 'react' with import React from 'react' and use React.useState in the code.",
+        "metadata": {}
     }
 ]
