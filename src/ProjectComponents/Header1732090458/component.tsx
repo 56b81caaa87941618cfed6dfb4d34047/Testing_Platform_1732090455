@@ -1,23 +1,23 @@
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { ethers } from 'ethers';
 
 const UniswapV3FactoryInteraction: React.FC = () => {
-  const [provider, setProvider] = useState<ethers.providers.Web3Provider | null>(null);
-  const [signer, setSigner] = useState<ethers.Signer | null>(null);
-  const [contract, setContract] = useState<ethers.Contract | null>(null);
-  const [tokenA, setTokenA] = useState('');
-  const [tokenB, setTokenB] = useState('');
-  const [fee, setFee] = useState('');
-  const [poolResult, setPoolResult] = useState('');
-  const [feeAmount, setFeeAmount] = useState('');
-  const [tickSpacing, setTickSpacing] = useState('');
-  const [getPoolTokenA, setGetPoolTokenA] = useState('');
-  const [getPoolTokenB, setGetPoolTokenB] = useState('');
-  const [getPoolFee, setGetPoolFee] = useState('');
-  const [getPoolResult, setGetPoolResult] = useState('');
-  const [owner, setOwner] = useState('');
-  const [parameters, setParameters] = useState<any>(null);
+  const [provider, setProvider] = React.useState<ethers.providers.Web3Provider | null>(null);
+  const [signer, setSigner] = React.useState<ethers.Signer | null>(null);
+  const [contract, setContract] = React.useState<ethers.Contract | null>(null);
+  const [tokenA, setTokenA] = React.useState('');
+  const [tokenB, setTokenB] = React.useState('');
+  const [fee, setFee] = React.useState('');
+  const [poolResult, setPoolResult] = React.useState('');
+  const [feeAmount, setFeeAmount] = React.useState('');
+  const [tickSpacing, setTickSpacing] = React.useState('');
+  const [getPoolTokenA, setGetPoolTokenA] = React.useState('');
+  const [getPoolTokenB, setGetPoolTokenB] = React.useState('');
+  const [getPoolFee, setGetPoolFee] = React.useState('');
+  const [getPoolResult, setGetPoolResult] = React.useState('');
+  const [owner, setOwner] = React.useState('');
+  const [parameters, setParameters] = React.useState<any>(null);
 
   const contractAddress = '0x1F98431c8aD98523631AE4a59f267346ea31F984';
   const chainId = 1; // Ethereum Mainnet
