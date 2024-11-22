@@ -443,5 +443,20 @@
         "source": "web_client",
         "content": "I want in the footer you genreate a sc frontend interaction 0x3abc4764f0237923d52056cfba7e9aebf87113d3 in ethereum",
         "metadata": {}
+    },
+    {
+        "id": "e5db25ad-56fc-4842-b72f-935f0ebe6a88",
+        "timestamp": "2024-11-22T10:32:33.042167Z",
+        "role": "tool_call",
+        "source": "smart_contract_assistant",
+        "content": null,
+        "metadata": {
+            "id": "call_QEKHjolIayJYJ4CYW2MNe5CP",
+            "function": {
+                "arguments": "{\"component_id\":\"Footer1732090458\",\"sc_address\":\"0x3abc4764f0237923d52056cfba7e9aebf87113d3\",\"chain_id\":\"ETHEREUM\",\"change_description\":\"Generate a frontend to interact with the smart contract on Ethereum\",\"acknowledgement_message\":\"Generating a frontend to interact with the smart contract at 0x3abc4764f0237923d52056cfba7e9aebf87113d3 on Ethereum...\"}",
+                "name": "EditSmartContractFrontendComponent"
+            },
+            "type": "function"
+        }
     }
 ]
