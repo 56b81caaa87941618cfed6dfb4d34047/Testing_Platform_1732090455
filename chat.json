@@ -484,5 +484,13 @@
         "source": "smart_contract_assistant",
         "content": "I have successfully generated a frontend component in the footer to interact with the smart contract on Ethereum at the provided address. Is there anything else you need assistance with?",
         "metadata": {}
+    },
+    {
+        "id": "25a05d66-c2b8-4da9-801b-cf56ed3bf2fb",
+        "timestamp": "2024-11-22T10:33:30.820372Z",
+        "role": "user",
+        "source": "web_client",
+        "content": "I want in the footer you genreate a sc frontend interaction 0x8d09a4502Cc8Cf1547aD300E066060D043f6982D in holesky",
+        "metadata": {}
     }
 ]
