@@ -394,5 +394,20 @@
         "source": "web_client",
         "content": "I want in the footer you genreate a sc frontend interaction 0x8FdA5a7a8dCA67BBcDd10F02Fa0649A937215422 in zksync",
         "metadata": {}
+    },
+    {
+        "id": "3db45445-42a8-4b4c-8775-5cbd65245598",
+        "timestamp": "2024-11-22T10:25:25.885829Z",
+        "role": "tool_call",
+        "source": "smart_contract_assistant",
+        "content": null,
+        "metadata": {
+            "id": "call_p1EyDaXRKk7k0TxtokVM2fFe",
+            "function": {
+                "arguments": "{\"component_id\":\"Footer1732090458\",\"sc_address\":\"0x8FdA5a7a8dCA67BBcDd10F02Fa0649A937215422\",\"chain_id\":\"ZKSYNCERA\",\"change_description\":\"Generate a frontend to interact with the smart contract on zkSync\",\"acknowledgement_message\":\"Generating a frontend to interact with the smart contract at 0x8FdA5a7a8dCA67BBcDd10F02Fa0649A937215422 on zkSync...\"}",
+                "name": "EditSmartContractFrontendComponent"
+            },
+            "type": "function"
+        }
     }
 ]
