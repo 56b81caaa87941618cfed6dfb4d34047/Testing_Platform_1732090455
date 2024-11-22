@@ -345,5 +345,20 @@
         "source": "web_client",
         "content": "sorry, only Polygon",
         "metadata": {}
+    },
+    {
+        "id": "9b1f1f4d-a3c9-4f53-a59d-93f22d33fd5b",
+        "timestamp": "2024-11-22T10:23:23.581684Z",
+        "role": "tool_call",
+        "source": "smart_contract_assistant",
+        "content": null,
+        "metadata": {
+            "id": "call_BnVqcEJeS1GHLzNLXlazPaer",
+            "function": {
+                "arguments": "{\"component_id\":\"Header1732090458\",\"sc_address\":\"0x1F98431c8aD98523631AE4a59f267346ea31F984\",\"chain_id\":\"POLYGON\",\"change_description\":\"Generate a frontend to interact with the smart contract on Polygon\",\"acknowledgement_message\":\"Generating a frontend to interact with the smart contract at 0x1F98431c8aD98523631AE4a59f267346ea31F984 on Polygon...\"}",
+                "name": "EditSmartContractFrontendComponent"
+            },
+            "type": "function"
+        }
     }
 ]
