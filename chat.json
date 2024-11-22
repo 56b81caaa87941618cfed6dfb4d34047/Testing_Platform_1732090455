@@ -435,5 +435,13 @@
         "source": "smart_contract_assistant",
         "content": "I have successfully generated a frontend component in the footer to interact with the smart contract on zkSync at the provided address. Is there anything else you need assistance with?",
         "metadata": {}
+    },
+    {
+        "id": "6b9b3018-2101-4ce9-9691-cd7ad7eab802",
+        "timestamp": "2024-11-22T10:32:25.769020Z",
+        "role": "user",
+        "source": "web_client",
+        "content": "I want in the footer you genreate a sc frontend interaction 0x3abc4764f0237923d52056cfba7e9aebf87113d3 in ethereum",
+        "metadata": {}
     }
 ]
