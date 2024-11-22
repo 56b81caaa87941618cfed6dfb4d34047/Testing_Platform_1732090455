@@ -386,5 +386,13 @@
         "source": "smart_contract_assistant",
         "content": "I have successfully generated a frontend component for interacting with the smart contract on Polygon at the provided address. The component includes functionality for all methods specified in the ABI. Is there anything else you would like to do?",
         "metadata": {}
+    },
+    {
+        "id": "1c671f55-4b40-499f-9e35-a91f35399e8a",
+        "timestamp": "2024-11-22T10:25:20.550946Z",
+        "role": "user",
+        "source": "web_client",
+        "content": "I want in the footer you genreate a sc frontend interaction 0x8FdA5a7a8dCA67BBcDd10F02Fa0649A937215422 in zksync",
+        "metadata": {}
     }
 ]
