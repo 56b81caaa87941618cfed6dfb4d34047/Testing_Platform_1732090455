@@ -492,5 +492,20 @@
         "source": "web_client",
         "content": "I want in the footer you genreate a sc frontend interaction 0x8d09a4502Cc8Cf1547aD300E066060D043f6982D in holesky",
         "metadata": {}
+    },
+    {
+        "id": "65080d71-1c0b-4514-9c9e-c4d3e48c1959",
+        "timestamp": "2024-11-22T10:33:36.404368Z",
+        "role": "tool_call",
+        "source": "smart_contract_assistant",
+        "content": null,
+        "metadata": {
+            "id": "call_N70bjY6TazlyG2pcDbwZ5mL9",
+            "function": {
+                "arguments": "{\"component_id\":\"Footer1732090458\",\"sc_address\":\"0x8d09a4502Cc8Cf1547aD300E066060D043f6982D\",\"chain_id\":\"HOLESKY\",\"change_description\":\"Generate a frontend to interact with the smart contract on Holesky\",\"acknowledgement_message\":\"Generating a frontend to interact with the smart contract at 0x8d09a4502Cc8Cf1547aD300E066060D043f6982D on Holesky...\"}",
+                "name": "EditSmartContractFrontendComponent"
+            },
+            "type": "function"
+        }
     }
 ]
