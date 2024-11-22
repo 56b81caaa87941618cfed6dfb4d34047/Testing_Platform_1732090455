@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ethers } from 'ethers';
 
@@ -16,10 +17,11 @@ const UniswapV3FactoryInteraction: React.FC = () => {
   const [getPoolFee, setGetPoolFee] = React.useState('');
   const [getPoolResult, setGetPoolResult] = React.useState('');
   const [owner, setOwner] = React.useState('');
-  const [parameters, setParameters] = React.useState<any>(null);
+  const [enableFeeAmount, setEnableFeeAmount] = React.useState('');
+  const [enableTickSpacing, setEnableTickSpacing] = React.useState('');
 
   const contractAddress = '0x1F98431c8aD98523631AE4a59f267346ea31F984';
-  const chainId = 1; // Ethereum Mainnet
+  const chainId = 137; // Polygon
 
   const contractABI = [
     {
@@ -31,6 +33,15 @@ const UniswapV3FactoryInteraction: React.FC = () => {
         { name: "fee", type: "uint24" }
       ],
       outputs: [{ name: "pool", type: "address" }]
+    },
+    {
+      name: "enableFeeAmount",
+      stateMutability: "nonpayable",
+      inputs: [
+        { name: "fee", type: "uint24" },
+        { name: "tickSpacing", type: "int24" }
+      ],
+      outputs: []
     },
     {
       name: "feeAmountTickSpacing",
@@ -53,18 +64,6 @@ const UniswapV3FactoryInteraction: React.FC = () => {
       stateMutability: "view",
       inputs: [],
       outputs: [{ name: "", type: "address" }]
-    },
-    {
-      name: "parameters",
-      stateMutability: "view",
-      inputs: [],
-      outputs: [
-        { name: "factory", type: "address" },
-        { name: "token0", type: "address" },
-        { name: "token1", type: "address" },
-        { name: "fee", type: "uint24" },
-        { name: "tickSpacing", type: "int24" }
-      ]
     }
   ];
 
@@ -99,9 +98,22 @@ const UniswapV3FactoryInteraction: React.FC = () => {
             method: 'wallet_switchEthereumChain',
             params: [{ chainId: `0x${chainId.toString(16)}` }],
           });
-        } catch (error) {
-          console.error("Failed to switch network:", error);
-          throw error;
+        } catch (error: any) {
+          if (error.code === 4902) {
+            await window.ethereum.request({
+              method: 'wallet_addEthereumChain',
+              params: [{
+                chainId: `0x${chainId.toString(16)}`,
+                chainName: 'Polygon',
+                nativeCurrency: { name: 'MATIC', symbol: 'MATIC', decimals: 18 },
+                rpcUrls: ['https://polygon-rpc.com/'],
+                blockExplorerUrls: ['https://polygonscan.com/'],
+              }],
+            });
+          } else {
+            console.error("Failed to switch network:", error);
+            throw error;
+          }
         }
       }
     }
@@ -120,6 +132,21 @@ const UniswapV3FactoryInteraction: React.FC = () => {
     } catch (error) {
       console.error("Error creating pool:", error);
       setPoolResult('Error creating pool. See console for details.');
+    }
+  };
+
+  const enableFeeAmountFunction = async () => {
+    try {
+      await checkAndSwitchChain();
+      const connectedSigner = signer || await connectWallet();
+      if (contract && connectedSigner) {
+        const tx = await contract.connect(connectedSigner).enableFeeAmount(enableFeeAmount, enableTickSpacing);
+        await tx.wait();
+        setPoolResult('Fee amount enabled successfully');
+      }
+    } catch (error) {
+      console.error("Error enabling fee amount:", error);
+      setPoolResult('Error enabling fee amount. See console for details.');
     }
   };
 
@@ -159,21 +186,9 @@ const UniswapV3FactoryInteraction: React.FC = () => {
     }
   };
 
-  const getParameters = async () => {
-    try {
-      if (contract) {
-        const result = await contract.parameters();
-        setParameters(result);
-      }
-    } catch (error) {
-      console.error("Error getting parameters:", error);
-      setParameters('Error. See console for details.');
-    }
-  };
-
   return (
     <div className="p-5">
-      <h1 className="text-3xl font-bold mb-5">UniswapV3Factory Interaction</h1>
+      <h1 className="text-3xl font-bold mb-5">UniswapV3Factory Interaction on Polygon</h1>
 
       <div className="mb-5 p-5 bg-gray-100 rounded-lg shadow-md">
         <h2 className="text-xl font-semibold mb-3">Create Pool</h2>
@@ -205,6 +220,30 @@ const UniswapV3FactoryInteraction: React.FC = () => {
           Create Pool
         </button>
         {poolResult && <p className="mt-2">Pool Result: {poolResult}</p>}
+      </div>
+
+      <div className="mb-5 p-5 bg-gray-100 rounded-lg shadow-md">
+        <h2 className="text-xl font-semibold mb-3">Enable Fee Amount</h2>
+        <input
+          type="number"
+          placeholder="Fee Amount"
+          className="w-full p-2 mb-2 border rounded"
+          value={enableFeeAmount}
+          onChange={(e) => setEnableFeeAmount(e.target.value)}
+        />
+        <input
+          type="number"
+          placeholder="Tick Spacing"
+          className="w-full p-2 mb-2 border rounded"
+          value={enableTickSpacing}
+          onChange={(e) => setEnableTickSpacing(e.target.value)}
+        />
+        <button
+          onClick={enableFeeAmountFunction}
+          className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+        >
+          Enable Fee Amount
+        </button>
       </div>
 
       <div className="mb-5 p-5 bg-gray-100 rounded-lg shadow-md">
@@ -266,25 +305,6 @@ const UniswapV3FactoryInteraction: React.FC = () => {
           Get Owner
         </button>
         {owner && <p className="mt-2">Owner: {owner}</p>}
-      </div>
-
-      <div className="mb-5 p-5 bg-gray-100 rounded-lg shadow-md">
-        <h2 className="text-xl font-semibold mb-3">Parameters</h2>
-        <button
-          onClick={getParameters}
-          className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-        >
-          Get Parameters
-        </button>
-        {parameters && (
-          <div className="mt-2">
-            <p>Factory: {parameters.factory}</p>
-            <p>Token0: {parameters.token0}</p>
-            <p>Token1: {parameters.token1}</p>
-            <p>Fee: {parameters.fee.toString()}</p>
-            <p>Tick Spacing: {parameters.tickSpacing.toString()}</p>
-          </div>
-        )}
       </div>
     </div>
   );
