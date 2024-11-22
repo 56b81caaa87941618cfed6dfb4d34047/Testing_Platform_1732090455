@@ -337,5 +337,13 @@
         "source": "smart_contract_assistant",
         "content": "Could you please confirm which chain you want to use for this? Do you want to generate interactions for both Polygon and Holesky?",
         "metadata": {}
+    },
+    {
+        "id": "d00bf384-4093-432f-9a45-77d26935946d",
+        "timestamp": "2024-11-22T10:23:19.243659Z",
+        "role": "user",
+        "source": "web_client",
+        "content": "sorry, only Polygon",
+        "metadata": {}
     }
 ]
