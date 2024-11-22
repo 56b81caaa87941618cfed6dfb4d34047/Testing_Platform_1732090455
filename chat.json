@@ -304,5 +304,20 @@
         "source": "web_client",
         "content": "I want you genreate a sc frontend interaction 0x1F98431c8aD98523631AE4a59f267346ea31F984 in polygon in holeskuy",
         "metadata": {}
+    },
+    {
+        "id": "77f6bebc-17ff-4509-8bf4-e3514451a008",
+        "timestamp": "2024-11-22T10:23:02.352618Z",
+        "role": "tool_call",
+        "source": "base_assistant",
+        "content": null,
+        "metadata": {
+            "id": "call_BnVqcEJeS1GHLzNLXlazPaer",
+            "function": {
+                "arguments": "{}",
+                "name": "TransferToSmartContractAssistant"
+            },
+            "type": "function"
+        }
     }
 ]
