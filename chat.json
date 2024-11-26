@@ -6,36 +6,5 @@
         "source": "base_assistant",
         "content": "Welcome to your new project! I can help you edit it however you want. What would you like to do?",
         "metadata": {}
-    },
-    {
-        "id": "f15bddf9-97c6-4c6e-97a6-5b2e432a0ce9",
-        "timestamp": "2024-11-25T16:12:35.244130Z",
-        "role": "user",
-        "source": "web_client",
-        "content": "create a frontend for the sc address 0x4E46BD7147ccf666E1d73A3A456fC7a68de82eCA in holesky now on the hero",
-        "metadata": {}
-    },
-    {
-        "id": "12218033-5f5c-4fe6-951b-ce1a354eb282",
-        "timestamp": "2024-11-25T16:12:44.094647Z",
-        "role": "tool_call",
-        "source": "base_assistant",
-        "content": null,
-        "metadata": {
-            "id": "call_seubwrbrw7zAXqb9CMA2TZeV",
-            "function": {
-                "arguments": "{\"component_id\":\"Hero1732090458\",\"sc_address\":\"0x4E46BD7147ccf666E1d73A3A456fC7a68de82eCA\",\"chain_id\":\"HOLESKY\",\"change_description\":\"Create a frontend for the smart contract address\",\"acknowledgement_message\":\"Okay, I'm editing the Hero component to interact with the smart contract at 0x4E46BD7147ccf666E1d73A3A456fC7a68de82eCA\"}",
-                "name": "EditSmartContractFrontendComponent"
-            },
-            "type": "function"
-        }
-    },
-    {
-        "id": "68991b0c-e388-4950-8e5e-05d6ef0cdfeb",
-        "timestamp": "2024-11-25T16:12:45.309753Z",
-        "role": "assistant",
-        "source": "tool:edit_smart_contract_frontend_component",
-        "content": "Okay, I'm editing the Hero component to interact with the smart contract at 0x4E46BD7147ccf666E1d73A3A456fC7a68de82eCA",
-        "metadata": {}
     }
 ]
